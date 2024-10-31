@@ -1,17 +1,24 @@
 <idea-plugin>
     <id>com.yawl.vagrant</id>
 
-    <name>Vagrant</name>
+    <name>Vagrant Icon</name>
 
-    <vendor email="yawl.foss@gmail.com" url="https://www.yourcompany.com">Yawl</vendor>
+    <vendor>Yawl</vendor>
 
     <description><![CDATA[
-    <p>Enhance your development environment with a custom Vagrant icon for <code>Vagrantfile</code> files. This plugin automatically adds a distinct Vagrant logo to any <code>Vagrantfile</code>, improving project file visibility and organization within your JetBrains IDE.</p>
+    <p>Enhance your development environment with a custom Vagrant icon for <code>Vagrantfile</code> files.</p>
+    <p>This plugin automatically adds a distinct Vagrant logo to any <code>Vagrantfile</code>, improving project file visibility and organization within your JetBrains IDE.</p>
 ]]></description>
 
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-
+        <fileType
+                name="Vagrantfile"
+                fileNames="Vagrantfile"
+                implementationClass="com.yawl.vagrant.VagrantFileType"
+                fieldName="INSTANCE"
+                language="Vagrant"
+                extensions=""/>
     </extensions>
 </idea-plugin>
