@@ -13,12 +13,6 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <fileType
-                name="Vagrantfile"
-                fileNames="Vagrantfile"
-                implementationClass="com.yawl.vagrant.VagrantFileType"
-                fieldName="INSTANCE"
-                language="Vagrant"
-                extensions=""/>
+        <iconProvider implementation="com.yawl.vagrant.VagrantIconProvider"/>
     </extensions>
 </idea-plugin>
